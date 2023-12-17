@@ -28,7 +28,7 @@ function Register() {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:8000/api/v1/user/register`,
+        `${process.env.REACT_APP_REACT_URL}/api/v1/user/register`,
         {
           method: "POST",
           headers: {

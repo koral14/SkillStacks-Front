@@ -32,7 +32,7 @@ console.log(isLoggedIn);
     const fetchDecks = async () => {
       try {
         if (isLoggedIn) {
-          const response = await fetch("http://localhost:8000/api/v1/deck", {
+          const response = await fetch(`${process.env.REACT_APP_REACT_URL}/api/v1/deck`, {
           method: "GET" ,
           headers: { "Content-Type": "application/json"
             },
@@ -43,7 +43,7 @@ console.log(isLoggedIn);
           const privateUserDecks = userDecks.decks.filter(deck => deck.isPublic === false )
           setDecks([...decks, ...privateUserDecks]);
         } else {
-          const response = await fetch("http://localhost:8000/api/v1/decksAll", {
+          const response = await fetch(`${process.env.REACT_APP_REACT_URL}/api/v1/decksAll`, {
           method: "GET" ,
           headers: { "Content-Type": "application/json"
             },

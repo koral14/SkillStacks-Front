@@ -29,12 +29,12 @@ function LoginPage() {
     };
 
     try {
-      const response = await fetch(`http://localhost:8000/api/v1/user/login`, {
+        const response = await fetch(`${process.env.REACT_APP_REACT_URL}/api/v1/user/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        credentials: "include", // added this line
+        credentials: "include", 
         body: JSON.stringify(userData),
       });
 
