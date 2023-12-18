@@ -6,7 +6,7 @@ function DeckForm({ deck, setDeckData, onSaveDeck }) {
   async function handleSaveDeck(e) {
     e.preventDefault();
     try {
-      const response = await fetch(`${process.env.REACT_APP_REACT_URL}/api/v1/deck`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/v1/deck`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
