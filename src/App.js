@@ -43,7 +43,8 @@ console.log(isLoggedIn);
           const privateUserDecks = userDecks.decks.filter(deck => deck.isPublic === false )
           setDecks([...decks, ...privateUserDecks]);
         } else {
-          const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/v1/decksAll`, {
+          // const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/v1/decksAll`, {
+          const response = await fetch(`https://skillstacks.onrender.com/api/v1/decksAll`, {
           method: "GET" ,
           headers: { "Content-Type": "application/json"
             },
