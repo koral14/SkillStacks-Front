@@ -45,7 +45,7 @@ console.log(isLoggedIn);
         } else {
           // const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/v1/decksAll`, {
             // test
-          const response = await fetch(`https://skillstacks.onrender.com/api/v1/decksAll`, {
+          const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/v1/decksAll`, {
           method: "GET" ,
           headers: { "Content-Type": "application/json"
             },
